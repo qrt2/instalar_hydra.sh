@@ -1,0 +1,30 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+dep () {
+pkg install clang make binutils libssh openssl libidn2 pcre2 libgcrypt libxml2 zlib ncurses mariadb postgresql git -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confnew"
+}
+
+dow () {
+rm -rf thc-hydra > /dev/null 2>&1
+git clone https://github.com/vanhauser-thc/thc-hydra.git
+}
+
+conf () {
+echo "Aplicando patch do fdsan para Android..."
+cd thc-hydra || return
+sed -i '/int main(int argc, char \*argv\[\])/a \  extern void android_fdsan_set_error_level(int); android_fdsan_set_error_level(0);' hydra.c
+
+echo "Configurando e copilando hydra! "
+./configure --prefix=$PREFIX --with-ssl-inc=$PREFIX/include --with-ssl-lib=$PREFIX/lib && make -j4 && make install
+}
+
+dep
+dow
+conf
+
+if [[ $? -eq 0 ]]; then
+    echo -e "\n\033[1;32m Instalação Concluída com sucesso!\033[0m"
+    hydra -h | head -n 1
+else
+    echo -e "\n\033[1;31mErro na instalação do Hydra!\033[0m"
+fi
