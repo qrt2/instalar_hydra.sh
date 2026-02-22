@@ -15,3 +15,13 @@ Basta copiar e colar o comando abaixo no seu Termux:
 
 ```bash
 pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
+
+---
+## 👤 Créditos e Contato
+
+Desenvolvido por **@cyber**
+
+Para suporte, dúvidas ou atualizações, entre em contato via Telegram:
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/cybe4)
+
+---
