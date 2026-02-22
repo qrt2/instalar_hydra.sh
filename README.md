@@ -9,19 +9,16 @@ Este repositório contém um script de automação para instalar o **THC-Hydra**
 3.  **Compilação Nativa:** Compila o Hydra diretamente no seu hardware para máxima performance.
 4.  **Instalação Limpa:** Move o binário para o seu `$PREFIX/bin` permitindo o uso global do comando `hydra`.
 
+## 👤 Créditos e Contato
+
+Desenvolvido por **@cyber**
+
+Para suporte, dúvidas ou atualizações, entre em contato via Telegram:
+https://t.me/cybe4
+
 ## Como Instalar
 
 Basta copiar e colar o comando abaixo no seu Termux:
 
 ```bash
 pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
-
----
-## 👤 Créditos e Contato
-
-Desenvolvido por **@cyber**
-
-Para suporte, dúvidas ou atualizações, entre em contato via Telegram:
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/cybe4)
-
----
