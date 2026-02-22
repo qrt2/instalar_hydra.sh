@@ -14,4 +14,4 @@ Este repositório contém um script de automação para instalar o **THC-Hydra**
 Basta copiar e colar o comando abaixo no seu Termux:
 
 ```bash
-pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra.sh/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
+pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
