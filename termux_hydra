@@ -5,6 +5,8 @@ pkg install clang make binutils libssh openssl libidn2 pcre2 libgcrypt libxml2 z
 }
 
 dow () {
+cd $HOME
+rm $HOME/termux_hydra > /dev/null 2>&1
 rm $PREFIX/bin/hydra > /dev/null 2>&1
 rm $HOME/.local/bin/hydra > /dev/null 2>&1
 rm -rf thc-hydra > /dev/null 2>&1
