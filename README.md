@@ -21,4 +21,5 @@ https://t.me/cybe4
 Basta copiar e colar o comando abaixo no seu Termux:
 
 ```bash
-pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
+pkg upgrade -y -o Dpkg::Options::="--force-confnew"
+&& pkg install curl -y && curl -LO https://raw.githubusercontent.com/qrt2/instalar_hydra/main/termux_hydra && chmod +x termux_hydra && ./termux_hydra
